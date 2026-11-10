@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Context mode",
+    "description": "Keeps large tool output out of the context window by indexing it locally and returning a short digest you can search."
+  }
+}

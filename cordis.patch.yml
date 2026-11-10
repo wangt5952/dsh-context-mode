@@ -1,0 +1,9 @@
+# Context-mode: installs the ctx_* tools and the post-execute externalization hook.
+- insert:
+    - id: dsh-context-mode
+      name: '@local/dsh-context-mode'
+      config:
+        externalizeOverBytes: 4096
+        outputCapBytes: 16384
+        digestBytes: 1200
+        enableHook: true

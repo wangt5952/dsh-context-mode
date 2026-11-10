@@ -1,0 +1,52 @@
+{
+  "name": "@local/dsh-context-mode",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Keeps large tool output out of the context window: ctx_* tools plus a post-execute hook with a local searchable store.",
+  "license": "MIT",
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "context-mode",
+    "context-window",
+    "bm25"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wangt5952/dsh-context-mode.git"
+  },
+  "homepage": "https://github.com/wangt5952/dsh-context-mode#readme",
+  "bugs": {
+    "url": "https://github.com/wangt5952/dsh-context-mode/issues"
+  },
+  "scripts": {
+    "test": "node test/smoke.mjs"
+  },
+  "exports": {
+    ".": "./index.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "index.js",
+    "lib/chunk.js",
+    "lib/exec.js",
+    "lib/hook.js",
+    "lib/store.js",
+    "lib/text.js",
+    "lib/tools.js",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "icon.svg",
+    "README.md"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  }
+}
