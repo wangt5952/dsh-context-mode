@@ -4,7 +4,7 @@
   "private": true,
   "type": "module",
   "description": "Keeps large tool output out of the context window: ctx_* tools plus a post-execute hook with a local searchable store.",
-  "license": "MIT",
+  "license": "Apache-2.0",
   "keywords": [
     "dsh",
     "dsh-plugin",

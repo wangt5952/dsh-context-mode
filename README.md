@@ -11,7 +11,7 @@ This repository is the plugin package itself — the repository root *is* the DS
 dsh-context-mode/
 ├── README.md              this file (English)
 ├── README.zh-CN.md        the same document in Chinese
-├── LICENSE                MIT
+├── LICENSE                Apache-2.0
 ├── package.json           DSH bundle manifest (name @local/dsh-context-mode, dsh.bundle.patch)
 ├── cordis.patch.yml       inserts id: dsh-context-mode + default config
 ├── index.js               apply(ctx, config): builds the Store, registers 5 tools, installs the hook
@@ -215,6 +215,8 @@ The subprocess group is skipped inside the shell sandbox (`spawn EPERM`) and onl
 ## 5. License
 
 Upstream `mksglu/context-mode` is ELv2 (source-available, free for self-hosting, not for reselling as a hosted service). This plugin is an **independent implementation of the mechanism**, not a copy of its code; it reuses the published design ideas and figures (4096 / 16384 / 1200, and so on).
+
+This plugin itself is released under the **Apache License 2.0** (SPDX: `Apache-2.0`); see [`LICENSE`](LICENSE).
 
 ## 6. Acknowledgements
 

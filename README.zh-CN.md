@@ -11,7 +11,7 @@
 dsh-context-mode/
 ├── README.md              英文版
 ├── README.zh-CN.md        本文件（中文版）
-├── LICENSE                MIT
+├── LICENSE                Apache-2.0
 ├── package.json           DSH bundle manifest（name @local/dsh-context-mode, dsh.bundle.patch）
 ├── cordis.patch.yml       插入 id: dsh-context-mode + 默认配置
 ├── index.js               apply(ctx, config)：建 Store、注册 5 个工具、装钩子
@@ -216,6 +216,8 @@ node test\smoke.mjs
 ## 五、许可
 
 上游 `mksglu/context-mode` 是 ELv2（源码可见、可自用、不可做成托管服务转卖）。本插件是**按机制重写**的独立实现，未复制其代码，仅沿用其公开的设计思路与数值（4096 / 16384 / 1200 等）。
+
+本插件本身以 **Apache License 2.0**（SPDX：`Apache-2.0`）发布，见 [`LICENSE`](LICENSE)。
 
 ## 六、致谢
 
