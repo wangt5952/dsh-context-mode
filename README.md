@@ -215,3 +215,9 @@ The subprocess group is skipped inside the shell sandbox (`spawn EPERM`) and onl
 ## 5. License
 
 Upstream `mksglu/context-mode` is ELv2 (source-available, free for self-hosting, not for reselling as a hosted service). This plugin is an **independent implementation of the mechanism**, not a copy of its code; it reuses the published design ideas and figures (4096 / 16384 / 1200, and so on).
+
+## 6. Acknowledgements
+
+Thanks to [mksglu](https://github.com/mksglu) and the [mksglu/context-mode](https://github.com/mksglu/context-mode) project. The idea of keeping large tool output out of the context window, the published design (4096 B replacement trigger, 16 KB output cap, BM25 + RRF retrieval, markdown-aware chunking) and the measured numbers all come from there. This plugin is an independent implementation of that mechanism for DeepSeek Harness, written from scratch against DSH's `tools/post-execute` hook and tool API.
+
+This repository is not affiliated with or endorsed by the upstream author. **If the author — or anyone else — believes this work infringes their rights, please get in touch and it will be taken down on request, no questions asked**: open an issue at <https://github.com/wangt5952/dsh-context-mode/issues> or email <wangt5952@sina.com>.

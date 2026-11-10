@@ -216,3 +216,9 @@ node test\smoke.mjs
 ## 五、许可
 
 上游 `mksglu/context-mode` 是 ELv2（源码可见、可自用、不可做成托管服务转卖）。本插件是**按机制重写**的独立实现，未复制其代码，仅沿用其公开的设计思路与数值（4096 / 16384 / 1200 等）。
+
+## 六、致谢
+
+感谢 [mksglu](https://github.com/mksglu) 与 [mksglu/context-mode](https://github.com/mksglu/context-mode) 项目。把大块工具输出挡在上下文窗口之外这个思路、公开的设计细节（4096 B 替换阈值、16 KB 输出上限、BM25 + RRF 检索、按 Markdown 结构切块）以及那些实测数字，都来自那里。本插件是针对 DeepSeek Harness 的独立实现，按 DSH 的 `tools/post-execute` 钩子和工具接口从零编写。
+
+本仓库与上游作者没有隶属关系，也未获其背书。**如果作者本人或任何人认为本项目构成侵权，请随时联系，我们会立即撤除，不提任何条件**：在 <https://github.com/wangt5952/dsh-context-mode/issues> 开一个 issue，或发邮件到 <wangt5952@sina.com>。
