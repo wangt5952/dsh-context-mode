@@ -1,4 +1,30 @@
+# ---------------------------------------------------------------------------
+# Line endings
+#
+# Git attributes cannot branch on the operating system: a pattern matches a
+# path, not a platform. "Windows vs macOS/Linux" is therefore expressed by
+# file type -- scripts that only run on Windows keep CRLF, everything else
+# (including Unix shells) stays LF. The first rule is the default for all
+# text files and already gives byte-identical checkouts on every OS.
+# ---------------------------------------------------------------------------
+
+# Default for every text file: LF in the repository, LF in the checkout.
+# eol=lf overrides core.autocrlf, so Windows / Linux / macOS get the same bytes.
 * text=auto eol=lf
+
+# Windows-only scripts must keep CRLF (cmd.exe, batch parsing, legacy tooling)
+*.bat  text eol=crlf
+*.cmd  text eol=crlf
+*.ps1  text eol=crlf
+*.psm1 text eol=crlf
+
+# Unix / macOS scripts stay LF (shebang scripts, double-clickable .command)
+*.sh      text eol=lf
+*.bash    text eol=lf
+*.zsh     text eol=lf
+*.command text eol=lf
+
+# Binary assets: no line-ending normalisation and no text diff
 *.png binary
 *.jpg binary
 *.webp binary
